@@ -1,0 +1,74 @@
+/* Background Image */
+body {
+  background-image: url("https://your-image-url-here.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Styling the container */
+.container {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Cards Layout */
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+}
+
+/* Hover Effect on Cards */
+.card {
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+/* Winner Screen */
+.winner {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 30px;
+  border-radius: 10px;
+  animation: bounce 1s ease-in-out;
+}
+
+/* Bounce Animation for Winner */
+@keyframes bounce {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+/* Fade-in Effect */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.card,
+.winner {
+  animation: fadeIn 0.5s ease-out;
+}
